@@ -16,6 +16,14 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final dynamic _username = "Ayush";
+  int _selectedIndex = 0;
+
+  void _onTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -110,25 +118,6 @@ class _HomePageState extends State<HomePage> {
             ),
             Expanded(
               child: SongListView(),
-            ),
-          ],
-        ),
-        bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: Colors.transparent,
-          unselectedItemColor: Colors.white30,
-          selectedItemColor: Colors.white,
-          items: [
-            BottomNavigationBarItem(
-              icon: Icon(Iconsax.home),
-              label: "Home",
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Iconsax.play),
-              label: "Scan",
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Iconsax.user),
-              label: "Profile",
             ),
           ],
         ),
