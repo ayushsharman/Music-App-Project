@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:music_app/pages/emotion_detect.dart';
 import 'package:music_app/pages/homepage.dart';
+import 'package:music_app/pages/profile.dart';
 
 class Routes extends StatefulWidget {
   const Routes({super.key});
@@ -21,6 +22,7 @@ class _RoutesState extends State<Routes> {
   final List<Widget> _pages = [
     const HomePage(),
     const EmotionDetection(),
+    const ProfilePage(),
   ];
   @override
   Widget build(BuildContext context) {
