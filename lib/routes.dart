@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:music_app/pages/emotion_detect.dart';
@@ -21,8 +19,8 @@ class _RoutesState extends State<Routes> {
   }
 
   final List<Widget> _pages = [
-    HomePage(),
-    EmotionDetection(),
+    const HomePage(),
+    const EmotionDetection(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -35,7 +33,7 @@ class _RoutesState extends State<Routes> {
         backgroundColor: Colors.transparent,
         unselectedItemColor: Colors.white30,
         selectedItemColor: Colors.white,
-        items: [
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(Iconsax.home),
             label: "Home",

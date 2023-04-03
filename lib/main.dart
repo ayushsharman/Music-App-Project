@@ -1,8 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:music_app/pages/emotion_detect.dart';
-import 'package:music_app/pages/homepage.dart';
 import 'package:music_app/routes.dart';
 
 void main() {
