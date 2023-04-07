@@ -8,7 +8,7 @@ import 'package:music_app/utils/tabbar_view.dart';
 import 'package:tab_indicator_styler/tab_indicator_styler.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   State<HomePage> createState() => _HomePageState();
