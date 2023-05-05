@@ -15,14 +15,15 @@ class _CameraScreenState extends State<CameraScreen> {
   XFile? _imageFile;
 
   Future<void> _takePicture() async {
+    setState(() {
+      _imageFile = null;
+    });
     final XFile? imageFile =
         await _picker.pickImage(source: ImageSource.camera);
     if (imageFile != null) {
-      setState(
-        () {
-          _imageFile = imageFile;
-        },
-      );
+      setState(() {
+        _imageFile = imageFile;
+      });
     }
   }
 
