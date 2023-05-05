@@ -1,6 +1,5 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
+import 'package:music_app/pages/camera.dart';
 import 'package:music_app/routes.dart';
 
 void main() {
@@ -18,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         backgroundColor: Color.fromRGBO(19, 19, 19, 100),
       ),
-      home: Routes(),
+      home: CameraScreen(),
     );
   }
 }
