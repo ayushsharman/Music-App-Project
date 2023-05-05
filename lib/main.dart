@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         backgroundColor: Color.fromRGBO(19, 19, 19, 100),
       ),
-      home: CameraScreen(),
+      home: const CameraScreen(),
     );
   }
 }

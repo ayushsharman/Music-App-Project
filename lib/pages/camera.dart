@@ -18,17 +18,22 @@ class _CameraScreenState extends State<CameraScreen> {
     final XFile? imageFile =
         await _picker.pickImage(source: ImageSource.camera);
     if (imageFile != null) {
-      setState(() {
-        _imageFile = imageFile;
-      });
+      setState(
+        () {
+          _imageFile = imageFile;
+        },
+      );
     }
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Theme.of(context).backgroundColor,
       appBar: AppBar(
+        centerTitle: true,
         title: const Text('Camera Screen'),
+        backgroundColor: Theme.of(context).backgroundColor,
       ),
       body: Center(
         child: _imageFile == null
