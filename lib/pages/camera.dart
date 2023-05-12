@@ -36,7 +36,11 @@ class _CameraScreenState extends State<CameraScreen> {
     }
   }
 
-  Future<void> _runModelOnImage(File image) async {
+  Future<void> _runModelOnImage(File? image) async {
+    if (image == null || !image.existsSync()) {
+      print("Error: Image file is null or does not exist.");
+      return;
+    }
     try {
       final Uint8List imageBytes = await image.readAsBytes();
       var recognitions = await Tflite.runModelOnBinary(
